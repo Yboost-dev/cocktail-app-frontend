@@ -1,10 +1,9 @@
 import React from 'react';
+import {Header} from 'components/Header/Header.js';
 
 const Index = () => (
-    <div>
-        <h1>Home</h1>
-        <p>This is the home page.</p>
-    </div>
+    <Header>
+    </Header>
 );
 
 export default Index;

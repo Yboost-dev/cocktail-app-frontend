@@ -1,15 +1,19 @@
 import React from "react";
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom"; // Make sure you are importing correctly
-import NotFound from 'scenes/NotFound/NotFound'; // Adjust the path if necessary
-import Home from 'scenes/Index/Index'; // Ensure this path is correct
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import NotFound from './scenes/NotFound/NotFound';
+import Home from './scenes/Index/Index';
+import {AuthRouter} from "./scenes/Auth/AuthRouter";
 
 export default function App() {
     return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<Home/>}/>
-                <Route path="*" element={<NotFound/>}/> {/* Catch-all for 404 */}
-            </Routes>
-        </Router>
+        <div className="App">
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Home/>}/>
+                    <Route path="/auth/*" element={<AuthRouter/>}/>
+                    <Route path="*" element={<NotFound/>}/>
+                </Routes>
+            </BrowserRouter>
+        </div>
     );
 }
