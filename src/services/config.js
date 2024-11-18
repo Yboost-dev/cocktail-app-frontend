@@ -1,5 +1,5 @@
 const config = {
-    apiUrl: 'http://localhost:8000', // URL du serveur Nest.js
+    apiUrl: process.env.REACT_APP_API_URL,
 };
 
 export default config;

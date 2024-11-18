@@ -1,0 +1,24 @@
+.wishlist-icon,
+.cart-icon{
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.wishlist-icon .count,
+.cart-icon .count{
+    position: absolute;
+    right: -5px;
+    bottom: -5px;
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 500;
+    color: #fff;
+    background: #000000;
+    border-radius: 50%;
+    min-width: 16px;
+    padding: 3px;
+    line-height: 1;
+    text-align: center;
+}
