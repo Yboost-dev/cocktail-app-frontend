@@ -5,7 +5,7 @@ export const IconHeader = ({user}) => {
     return (
         <div className="flex flex-row">
             <div>
-                <Link to={user ? `/user/${user.id}/profil` : '/auth/login'}>
+                <Link to={user ? `/user/${user.id}/dashboard` : '/auth/login'}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                          fill="none"
                          stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"

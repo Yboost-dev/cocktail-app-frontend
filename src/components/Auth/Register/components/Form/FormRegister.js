@@ -16,10 +16,14 @@ export const FormRegister = () => {
         const userData = {email, firstname, lastname, password};
 
         try {
-            await register(userData);
+            const messageError = await register(userData)
+            if (messageError.status !== 201 && messageError) {
+                setErrorMessages(messageError);
+                return;
+            }
             navigate('/');
         } catch (error) {
-            setErrorMessages(Array.isArray(error.message) ? error.message : [error.message]);
+            setErrorMessages(error);
         }
     };
 

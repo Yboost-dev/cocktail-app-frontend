@@ -39,8 +39,11 @@ export const register = async (userData) => {
         }
         return response.data;
     } catch (error) {
-        if (error.response || error.message) {
-            throw new Error(error.message);
+        if (typeof error.message === 'string') {
+            return [error.message];
+        }
+        if (error.message) {
+            return error.message;
         } else {
             throw new Error('Erreur réseau ou serveur');
         }
